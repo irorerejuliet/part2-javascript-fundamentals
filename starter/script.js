@@ -51,6 +51,20 @@ function calAge1(birthYear){
 const age1 = calAge1(1991);
 console.log(age1)
 
+function greet(){
+    return "Hello Juliet"
+}
+console.log(greet());
+
+function newName(){
+    return "IRORERE JULIET"
+}
+const oldName  = ("IRORERE JULIET")
+console.log(oldName);
+
+
+
+
 // function expression
 const calAge2 = function (birthYear){
     return 2037 - birthYear;
