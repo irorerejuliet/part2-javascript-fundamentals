@@ -56,11 +56,63 @@ function greet(){
 }
 console.log(greet());
 
-function newName(){
-    return "IRORERE JULIET"
+function firstname(name){
+    return name;
 }
-const oldName  = ("IRORERE JULIET")
-console.log(oldName);
+
+const lastname = firstname("IRORERE");
+const otherName = firstname("JULIET");
+console.log(lastname, otherName);
+
+function square(number){
+return number * number;
+}
+ const newNumber = square(7);
+ console.log(newNumber);
+
+function isEven(number){
+    return number / 2 === 0;
+}
+console.log(isEven(4));
+console.log(isEven(7));
+
+
+function isEven(number){
+    if(number / 2 === 0){
+        return `${number} is even`;
+    }else {
+        return `${number} is odd`;
+    }
+}
+
+console.log(isEven(10));
+console.log(isEven(17));
+console.log(isEven(0));
+
+function maxOfTwo(a, b){
+    return a > b ? a : b;
+}
+console.log(maxOfTwo(20, 80));
+
+
+function sumRange(start, end){
+    return (end -start + 1) * (start + end) / 2;
+}
+console.log(sumRange(1, 30));
+
+
+function reverseString(str){
+    let reversed = "";
+    let i = str.length - 1;
+    while (i >=0){
+        reversed +=str[i]
+    }
+    return reversed;
+}
+ console.log(reverseString("Irorere"));
+ 
+ 
+
 
 
 
