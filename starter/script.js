@@ -158,4 +158,47 @@ const max = (a, b) => (a >  b ? a : b);
 console.log(max(6, 7));
 console.log(max(17, 20));
 
+function cutFruitPieces (fruit){
+    return fruit * 4;
+}
 
+function fruitProcessor (apples, oranges){
+    const applePieces = cutFruitPieces(apples);
+    const orangesPieces = cutFruitPieces(oranges);
+
+    const juice = `Juice with ${applePieces}  pieces of apple and ${orangesPieces} pieces of orange.`;
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
+
+function generatePassword(length) {
+    function getRandomLetter() {
+        const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        return letters[Math.floor(Math.random() * letters.length)];
+    }
+
+    function getRandomNumber() {
+        const numbers = "0123456789";
+        return numbers[Math.floor(Math.random() * numbers.length)];
+    }
+
+    function getRandomSymbol() {
+        const symbols = "!@#$%^&*";
+        return symbols[Math.floor(Math.random() * symbols.length)];
+    }
+
+    let password = "";
+    const generators = [getRandomLetter, getRandomNumber, getRandomSymbol];
+
+    for (let i = 0; i < length; i++) {
+        // Pick a random generator function
+        const randomGen = generators[Math.floor(Math.random() * generators.length)];
+        password += randomGen();
+    }
+
+    return password;
+}
+
+console.log(generatePassword(8)); // Example: a7T@c9L!
