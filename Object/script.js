@@ -156,3 +156,11 @@ function add(a, b){
 
 const result = add(5, 10)
 console.log(result);
+
+
+function divide(a, b){
+  return a / b
+}
+
+const result2 = divide(4, 20)
+console.log(result2);
